@@ -9,7 +9,7 @@ class SupportService{
         try{
 
             const res = await SupportModel.create({userId, username, mail, text, description, isSend:false})
-            telegramService.sendMessageToAdmin(`Викторина по Туле: пользователь: ${username}, почта: ${mail}, текст: ${text}`)
+            telegramService.sendMessageToAdmin(`Викторина по РЖД: пользователь: ${username}, почта: ${mail}, текст: ${text}`)
             return {warning:false, data:{...new SupportDto(res)}}
         }
         catch (e) {
