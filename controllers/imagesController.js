@@ -17,7 +17,7 @@ class ImagesController{
             stream.end();
         }
         catch (e) {
-            return  res.json({warning:false, message:'Не дулось загрузить картинку'});
+            return  res.json({warning:false, message:'Не удалось загрузить картинку'});
         }
 
     }
