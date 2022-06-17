@@ -7,7 +7,6 @@ const completedRouter = require('./routers/completedRouter')
 const imageRouter = require('./routers/imagesRouters')
 const supportRouter = require('./routers/supportRouter')
 const categoryRouter = require('./routers/categoryRouter')
-const promoRouter = require('./routers/promoRouter')
 const authServices = require('./services/authServices')
 
 
@@ -51,7 +50,6 @@ app.use('/api/completed', completedRouter)
 app.use('/api/image/', imageRouter)
 app.use('/api/support/', supportRouter)
 app.use('/api/category/', categoryRouter)
-app.use('/api/promo/', promoRouter)
 
 const insertAdmin = ()=>{
     if(authServices.adminUser())
