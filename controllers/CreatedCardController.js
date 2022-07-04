@@ -24,7 +24,7 @@ class CreatedCardController{
                         const name = prefix+'_'+ n
                         const password = getRandomInt(100001, 999999).toString()
                         const user = await userService.registration(name, password, 'user', true, '')
-                        const token ='https://xn--71-6kch4aanzhuu.xn--c1abdmxeng9ge.xn--p1ai/qr/'+ await tokenService.generationToken({username:name, password})
+                        const token ='https://xn--d1ad3a.xn--c1abdmxeng9ge.xn--p1ai/qr/'+ await tokenService.generationToken({username:name, password})
                         console.log(user)
                         if (!user.warning && await createQrCard.createQrCard(name, password, token))
                             createdCardList.push(name)
